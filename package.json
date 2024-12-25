@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
-    "@vercel/ncc": "^0.38.1",
+    "@vercel/ncc": "^0.38.3",
     "adm-zip": "^0.4.16",
     "follow-redirects": "^1.15.6"
   },
