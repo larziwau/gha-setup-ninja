@@ -1,38 +1,37 @@
-setup-ninja
-==============
+# Setup Ninja
 
-[GitHub Action](https://github.com/features/actions) for installing ninja into
-the `PATH` for the job.
+[GitHub Action](https://github.com/features/actions) for installing Ninja into the `PATH` for the job.
 
-This downloads the official binaries from the [ninja-build](https://github.com/ninja-build/ninja)
-repository rather than using a package manager.
+This action downloads the official binaries from the [ninja-build](https://github.com/ninja-build/ninja) repository rather than using a package manager.
 
 Supports Windows, Linux, and macOS.
 
-Inputs:
+## Inputs
 
-- `version`: Version of ninja to install (default: 1.11.1)
-- `platform`: Override platform detection logic
-- `destination`: Target directory for download, added to `PATH`
-  (default: `${GITHUB_WORKSPACE}/ninja-build`)
-- `http_proxy`: Optional proxy server hostname
+- `version`: Version of Ninja to install (default: `1.12.1`).
+- `platform`: Override platform detection logic.
+- `destination`: Target directory for download, added to `PATH` (default: `${GITHUB_WORKSPACE}/ninja-build`).
+- `http_proxy`: Optional proxy server hostname.
 
-License
--------
-
-MIT License. See [LICENSE](LICENSE) for details.
-
-Usage Example
--------------
+## Usage Example
 
 ```yaml
 jobs:
   publish:
-    - uses: actions/checkout@master
-    - uses: seanmiddleditch/gha-setup-ninja@master
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup ninja
+      uses: seanmiddleditch/gha-setup-ninja@master
+
     - run: |
-      mkdir build
-      cd build
-      cmake -G Ninja ..
+        mkdir build
+        cd build
+        cmake -G Ninja ..
+
     - run: cmake --build build
 ```
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
