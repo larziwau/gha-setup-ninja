@@ -14,7 +14,7 @@
     "@actions/core": "^1.11.1",
     "@vercel/ncc": "^0.38.3",
     "adm-zip": "^0.4.16",
-    "follow-redirects": "^1.15.6"
+    "follow-redirects": "^1.15.9"
   },
   "dependencies": {
     "https-proxy-agent": "^7.0.6"
