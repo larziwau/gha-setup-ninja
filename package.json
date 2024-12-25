@@ -17,6 +17,6 @@
     "follow-redirects": "^1.15.6"
   },
   "dependencies": {
-    "https-proxy-agent": "^5.0.1"
+    "https-proxy-agent": "^7.0.6"
   }
 }
