@@ -1,23 +1,28 @@
-name: 'Install ninja-build tool'
+name: 'Setup ninja-build tool'
 description: 'Installs ninja and adds it to the path'
 branding:
   icon: 'terminal'
   color: 'white'
+
 inputs:
   version:
     description: 'Version of ninja-build to install'
-    default: '1.11.1'
+    default: '1.12.1'
     required: true
+
   platform:
-    description: 'Override default platform with one of [win, mac, linux]'
+    description: 'Override default platform with one of [win, mac, linux, winarm64, linux-aarch64]'
     required: false
+
   destination:
     description: 'Destination directory, will be added to PATH'
     default: 'ninja-build'
     required: false
+
   http_proxy:
-    description: 'Proxy server'
+    description: 'Use proxy server'
     required: false
+
 runs:
-  using: 'node20'
+  using: 'node22'
   main: 'dist/index.js'
